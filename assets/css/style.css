@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'hfe';
+    src:  url('../fonts/hfe.eot?ejqak3');
+    src:  url('../fonts/hfe.eot?ejqak3#iefix') format('embedded-opentype'),
+        url('../fonts/hfe.ttf?ejqak3') format('truetype'),
+        url('../fonts/hfe.woff?ejqak3') format('woff'),
+        url('../fonts/hfe.svg?ejqak3#hfe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="sce-icon-"], [class*=" sce-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'hfe' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.elementor-element [class*="sce-icon-"]:after {
+  /* content: "HFB"; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: #a4afb7;
+  background: transparent;
+  font-size: 10px;
+  font-family: Roboto,Arial,Helvetica,Verdana,sans-serif;
+  padding: 0.2em 0.5em;
+  border-width: 0 0 1px 1px;
+  border-color: #e0e0e0;
+  border-style: solid;
+}
+
+.sce-icon-search:before {
+  content: "\e908";
+}
+.sce-icon-site-logo:before {
+  content: "\e900";
+}
+.sce-icon-site-title:before {
+  content: "\e901";
+}
+.sce-icon-site-tagline:before {
+  content: "\e902";
+}
+.sce-icon-page-title:before {
+  content: "\e903";
+}
+.sce-icon-navigation-menu:before {
+  content: "\e904";
+}
+.sce-icon-menu-cart:before {
+  content: "\e905";
+}
+.sce-icon-copyright-widget:before {
+  content: "\e906";
+}
+.sce-icon-retina-image:before {
+  content: "\e907";
+}
+
+
