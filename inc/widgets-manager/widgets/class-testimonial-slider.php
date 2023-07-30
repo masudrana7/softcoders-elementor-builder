@@ -587,7 +587,7 @@ class TestimonialSlider extends Widget_Base {
                 'global'   => [
                     'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
                 ],
-                'selector' => '{{WRAPPER}} .sc-auother-texty .title, {{WRAPPER}} {{WRAPPER}} .sc-test-item .sc-auother-text .sc-auother-texty h5',
+                'selector' => '{{WRAPPER}} .sc-auother-texty .title, {{WRAPPER}} .sc-test-item .sc-auother-text .sc-auother-texty h5',
             ]
         );
         $this->add_responsive_control(
@@ -1264,7 +1264,7 @@ class TestimonialSlider extends Widget_Base {
                                         <img src="<?php echo $image; ?>" alt="image">
                                     </div>
                                     <div class="sc-auother-texty">
-                                        <h5><?php echo $author; ?></h5>
+                                        <h5 class="title"><?php echo $author; ?></h5>
                                         <span class="sub-title"><?php echo $degination; ?></span>
                                     </div>
                                 </div>

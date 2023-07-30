@@ -506,7 +506,7 @@ class BlogSlider extends Widget_Base {
             
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'item_gap_custom',
             [
                 'label' => esc_html__( 'Item Gap', 'scaddon' ),
