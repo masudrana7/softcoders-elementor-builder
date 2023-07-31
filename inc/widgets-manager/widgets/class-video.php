@@ -216,6 +216,17 @@ class Video extends Widget_Base {
 
             ]
         );
+        $this->add_responsive_control(
+		    'icon__margin',
+		    [
+		        'label' => esc_html__( 'Icon Margin', 'SoftCoders-header-footer-elementor' ),
+		        'type' => Controls_Manager::DIMENSIONS,
+		        'size_units' => [ 'px', 'em', '%' ],
+		        'selectors' => [
+		            '{{WRAPPER}} .sc-banner-section-area a.popup-video i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		        ],
+		    ]
+		);
 		$this->end_controls_section();
 
 	}
