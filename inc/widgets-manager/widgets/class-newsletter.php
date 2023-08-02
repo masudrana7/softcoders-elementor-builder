@@ -232,6 +232,38 @@ class Newsletter extends Widget_Base {
             ]
         );
         $this->add_responsive_control(
+            'box_direction',
+            [
+                'label' => esc_html__( 'Box Direction', 'SoftCoders-header-footer-elementor' ),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'row' => [
+                        'title' => esc_html__( 'Row', 'SoftCoders-header-footer-elementor' ),
+                        'icon' => ' eicon-arrow-right',
+                    ],
+                    'row-reverse' => [
+                        'title' => esc_html__( 'Row Reverse', 'SoftCoders-header-footer-elementor' ),
+                        'icon' => ' eicon-arrow-left',
+                    ],
+                    'column' => [
+                        'title' => esc_html__( 'Column ', 'SoftCoders-header-footer-elementor' ),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                    'column-reverse' => [
+                        'title' => esc_html__( 'Column Reverse', 'SoftCoders-header-footer-elementor' ),
+                        'icon' => 'eicon-arrow-up',
+                    ],
+                ],
+                'condition' => [
+                    'box_horizontal_align' => 'flex',
+                ],
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}} .mc4wp-form-fields p' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
             'flex_box_h_align',
             [
                 'label' => esc_html__( 'Horizontal Align', 'SoftCoders-header-footer-elementor' ),
@@ -289,7 +321,7 @@ class Newsletter extends Widget_Base {
                 'mobile_default' => [
                     'unit' => '%',
                 ],
-                'size_units' => [ '%', 'px' ],
+                'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
                 'range' => [
                     '%' => [
                         'min' => 1,

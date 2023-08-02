@@ -1283,7 +1283,7 @@ class TestimonialSlider extends Widget_Base {
                 var swiper = new Swiper(".sc-swiper-slider-<?php echo esc_attr($unique); ?>", {
 
 
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     <?php echo $seffect; ?>
                     speed: <?php echo esc_attr($autoplaySpeed); ?>,
                     loop:  <?php echo esc_attr($infinite ); ?>,

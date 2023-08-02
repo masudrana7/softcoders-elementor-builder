@@ -1552,7 +1552,7 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_area__padding',
             [
-                'label' => esc_html__( ' Area Paddin', 'SoftCoders-header-footer-elementor' ),
+                'label' => esc_html__( ' Area Padding', 'SoftCoders-header-footer-elementor' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -1560,6 +1560,28 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                 ],
             ]
         );
+        $this->add_responsive_control(
+			'button_max_width',
+			[
+				'label' => esc_html__( 'Button Max Width', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+						'step' => 5,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .sc-pricing-container .pricing-footer a' => 'max-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
 
         $this->start_controls_tabs( '_tabs_button' );
 
