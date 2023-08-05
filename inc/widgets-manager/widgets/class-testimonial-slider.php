@@ -1206,13 +1206,15 @@ class TestimonialSlider extends Widget_Base {
 
         ?>
         <div class="sc-testimonial-area sc-arrow-btn <?php if ('style2' == $settings['project_slider_style']) {  ?>sc-testimonial-section-three <?php } ?> ">
-            <div class="swiper sc-pagination-active sc-swiper-slider-<?php echo esc_attr($unique); ?> nav_<?php echo $settings['slider_nav']; ?>">
-                <?php
+
+        <?php
                     if( $sliderNav == 'true' ){
-                        echo ' <div class="swiper-button-next"><i class="ri-arrow-right-line"></i></div>
-                        <div class="swiper-button-prev"><i class="ri-arrow-left-line"></i></div>';
+                        echo ' <div class="swiper-button-prev"><i class="ri-arrow-left-line"></i></div>
+                        <div class="swiper-button-next"><i class="ri-arrow-right-line"></i></div>';
                     }
                 ?>
+            <div class="swiper sc-pagination-active sc-swiper-slider-<?php echo esc_attr($unique); ?> nav_<?php echo $settings['slider_nav']; ?>">
+                
                 <?php
                     if( $sliderDots == 'true' ) echo '<div class="swiper-pagination"></div>';
                 ?>
