@@ -488,7 +488,7 @@ class TestimonialSlider extends Widget_Base {
             
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'item_gap_custom',
             [
                 'label' => esc_html__( 'Item Gap', 'rtelements' ),
@@ -817,7 +817,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .swiper-button-prev' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-prev' => 'right: {{SIZE}}{{UNIT}}; left:unset;',
 				],
 				'separator' => 'before',
 			]
@@ -840,7 +840,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .swiper-button-next' => 'right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-prev' => 'left: {{SIZE}}{{UNIT}}; right:unset;',
 				],
 				'separator' => 'before',
 			]
@@ -912,6 +912,26 @@ class TestimonialSlider extends Widget_Base {
 				],
 			]
 		);
+        $this->add_responsive_control(
+			'arrow_icon_width_height',
+			[
+				'label' => esc_html__('Arrow Width & Height', 'scaddon'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 1000,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-prev,
+                    {{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-next' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};',
+                    
+				],
+				'separator' => 'before',
+			]
+		);
 
         $this->add_responsive_control(
 			'arrow_border_radious_color',
@@ -920,7 +940,7 @@ class TestimonialSlider extends Widget_Base {
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
-					'{{WRAPPER}} .swiper-button-prev:after, {{WRAPPER}} .swiper-button-next:after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .swiper-button-prev, {{WRAPPER}} .swiper-button-next' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -1209,8 +1229,8 @@ class TestimonialSlider extends Widget_Base {
 
         <?php
                     if( $sliderNav == 'true' ){
-                        echo ' <div class="swiper-button-prev"><i class="ri-arrow-left-line"></i></div>
-                        <div class="swiper-button-next"><i class="ri-arrow-right-line"></i></div>';
+                        echo ' <div class="swiper-button-prev"><i class="ri-arrow-right-line"></i></div>
+                        <div class="swiper-button-next"><i class="ri-arrow-left-line"></i></i></div>';
                     }
                 ?>
             <div class="swiper sc-pagination-active sc-swiper-slider-<?php echo esc_attr($unique); ?> nav_<?php echo $settings['slider_nav']; ?>">
