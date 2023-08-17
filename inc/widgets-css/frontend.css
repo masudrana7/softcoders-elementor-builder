@@ -3783,8 +3783,9 @@ div.sc-accordion-area .icon_image img {
 }
 
 /* Sqipper Arrow Css */
-.sc-testimonial-area.sc-arrow-btn .swiper-button-prev,
-.sc-testimonial-area.sc-arrow-btn .swiper-button-next{
+
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-prev,
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-next{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3798,25 +3799,25 @@ div.sc-accordion-area .icon_image img {
     opacity: 0;
     visibility: hidden;
 }
-.sc-testimonial-area.sc-arrow-btn:hover .swiper-button-next{
+.single-testimonial .sc-testimonial-area.sc-arrow-btn:hover .swiper-button-next{
     opacity: 1;
     visibility: visible;
     transform: translateX(-150%);
 }
-.sc-testimonial-area.sc-arrow-btn:hover .swiper-button-prev{
+.single-testimonial .sc-testimonial-area.sc-arrow-btn:hover .swiper-button-prev{
     opacity: 1;
     visibility: visible;
     transform: translateX(150%);
 }
-.sc-testimonial-area.sc-arrow-btn .swiper-button-prev i,
-.sc-testimonial-area.sc-arrow-btn .swiper-button-next i{
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-prev i,
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-next i{
     top: unset;
 }
-.sc-testimonial-area.sc-arrow-btn .swiper-button-prev{
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-prev{
     right:0;
     left: unset;
 }
-.sc-testimonial-area.sc-arrow-btn .swiper-button-next{
+.single-testimonial .sc-testimonial-area.sc-arrow-btn .swiper-button-next{
     left: 0;
     right: unset;
 }

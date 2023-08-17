@@ -817,7 +817,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-prev' => 'right: {{SIZE}}{{UNIT}}; left:unset;',
+					'{{WRAPPER}} .swiper-button-prev' => 'right: {{SIZE}}{{UNIT}}; left:unset;',
 				],
 				'separator' => 'before',
 			]
@@ -840,7 +840,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .sc-testimonial-area.sc-arrow-btn .swiper-button-prev' => 'left: {{SIZE}}{{UNIT}}; right:unset;',
+					'{{WRAPPER}} .swiper-button-next' => 'left: {{SIZE}}{{UNIT}}; right:unset;',
 				],
 				'separator' => 'before',
 			]
@@ -863,7 +863,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .swiper-button-prev' => 'bottom: {{SIZE}}{{UNIT}}; top: auto; transform: inherit',
+					'{{WRAPPER}} .swiper-button-prev' => 'bottom: {{SIZE}}{{UNIT}}; top: auto; transform: inherit;',
 				],
 				'separator' => 'before',
 			]
@@ -887,7 +887,7 @@ class TestimonialSlider extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .swiper-button-next' => 'bottom: {{SIZE}}{{UNIT}}; top: auto; transform: inherit',
+					'{{WRAPPER}} .swiper-button-next' => 'bottom: {{SIZE}}{{UNIT}}; top: auto; transform: inherit;',
 				],
 				'separator' => 'before',
 			]
