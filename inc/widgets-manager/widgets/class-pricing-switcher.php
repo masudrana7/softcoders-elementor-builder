@@ -1133,7 +1133,35 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
+            'heading_icon_width_wrapper',
+            [
+                'label' => esc_html__( 'Wrapper Width', 'SoftCoders-header-footer-elementor' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} .sc-pricing-container ul.pricing-list li.exclusive ul.pricing-wrapper li .pricing-header .sc-price-image' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+                'condition'=>[
+                    'show_header_image'=>'flex'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'heading_icon_height_wrapper',
+            [
+                'label' => esc_html__( 'Wrapper Height', 'SoftCoders-header-footer-elementor' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} .sc-pricing-container ul.pricing-list li.exclusive ul.pricing-wrapper li .pricing-header .sc-price-image' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+                'condition'=>[
+                    'show_header_image'=>'flex'
+                ],
+            ]
+        );
+        $this->add_responsive_control(
             'heading_icon_width_',
             [
                 'label' => esc_html__( 'Width', 'SoftCoders-header-footer-elementor' ),
@@ -1147,7 +1175,7 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'heading_icon_height_',
             [
                 'label' => esc_html__( 'Height', 'SoftCoders-header-footer-elementor' ),
@@ -1818,6 +1846,7 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                     <li class="exclusive">
                         <ul class="pricing-wrapper"> 
 
+                            <!-- Monthly -->
                             <li data-type="monthly" class="is-visible">
                                 <?php if(!empty($badge)){ ?>
                                     <div class="pricebadge"><?php echo esc_attr ($badge);?></div>
@@ -1851,7 +1880,9 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                                 <?php } ?>
 
                             </li>
-
+                            <!-- End Monthly -->
+                            
+                            <!-- Yearly -->
                             <li data-type="yearly" class="is-hidden">
                                 <?php if(!empty($badge_yearly)){ ?>
                                     <div class="pricebadge"><?php echo esc_attr ($badge_yearly);?></div>
@@ -1863,10 +1894,10 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                                         <?php endif; ?>
                                     </div>
                                     <div class="price-item">
-                                        <h3><?php echo esc_attr ($title);?></h3>
-                                        <div class="price"><?php echo esc_attr ($price);?>
+                                        <h3><?php echo esc_attr ($title_yearly);?></h3>
+                                        <div class="price"><?php echo esc_attr ($price_yearly);?>
                                             <?php if(!empty($description)){ ?>
-                                            <span><?php echo esc_attr ($description);?></span>
+                                            <span><?php echo esc_attr ($description_yearly);?></span>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -1875,10 +1906,10 @@ class Pricing_Switcher extends \Elementor\Widget_Base {
                                     <div class="features"><?php echo wp_kses_post ($features_yearly);?></div>
                                 </div>
                                 <footer class="pricing-footer">
-
                                     <a class="price-btn" href="<?php echo esc_url($button_link_yearly);?>" <?php echo wp_kses_post($target);?>><span><?php echo esc_attr ($button_text_yearly);?></span></a>
                                 </footer>
                             </li>
+                            <!-- End Yearly -->
 
                         </ul>
                     </li>
