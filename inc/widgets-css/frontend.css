@@ -3731,7 +3731,6 @@ div.sc-accordion-area button:focus {
 }
 div.sc-accordion-area .accordion-button {
   font-size: 20px;
-  font-family: "Comfortaa", cursive;
   color: #121933;
   font-weight: 700;
   line-height: 1.35;
@@ -3821,25 +3820,3 @@ div.sc-accordion-area .icon_image img {
     left: 0;
     right: unset;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
